@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+student_performance/
 
 # Spyder project settings
 .spyderproject
