@@ -1,0 +1,6 @@
+base:
+  data_source_path: artifacts/data.csv
+  data_dest_path: artifacts1/data.csv
+  train_path: artifacts1/train.csv
+  test_path: artifacts1/test.csv
+  test_size: 0.25
