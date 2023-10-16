@@ -48,7 +48,8 @@ class model_trainer:
                     best_model = i
 
             save_object(object = models[best_model], object_path=self.model_config.model_path)
-
+            
+            print(report)
             print (best_model)
             print (best_score)
     
