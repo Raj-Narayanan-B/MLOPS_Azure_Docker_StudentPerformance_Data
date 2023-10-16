@@ -5,7 +5,7 @@ from src.logger import logging
 from src.exception import CustomException
 
 from sklearn.model_selection import train_test_split
-from dataclasses import dataclass
+from dataclasses import dataclass # type: ignore
 
 @dataclass
 class data_path:
@@ -35,6 +35,9 @@ class data_ingestion:
         
         except Exception as e:
             raise CustomException(e,sys)
+        
+    def get_paths(self):
+        return (self.train_path,self.test_path)
         
 if __name__=="__main__":
     obj=data_ingestion()
