@@ -5,6 +5,8 @@ base:
   test_path: artifacts1/test.csv
   test_size: 0.25
 
+model: artifacts\model.pkl
+preprocesser: artifacts\preprocessor.pkl
 
 params:
   Decision_Tree:

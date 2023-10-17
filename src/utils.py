@@ -5,9 +5,6 @@ import os
 import yaml
 
 from sklearn.model_selection import GridSearchCV
-
-
-
 from sklearn.metrics import r2_score
 
 def save_object(object,object_path):
@@ -23,6 +20,9 @@ def save_object(object,object_path):
 
     # joblib.dump(object,object_path)
 
+def load_object(object_path):
+    with open(object_path,'rb') as file:
+        return pickle.load(file)
 
 def evaluate_model(models,data):
     x_train,y_train,x_test,y_test = data
@@ -55,14 +55,12 @@ def hyper_parameter_tuning(model_name,model,data):
                       param_grid=param_grid,
                       scoring = "r2")
     gs.fit(x_train,y_train)
-    print (model)
+    print (model_name)
     print (gs.best_params_,"\n")
-    
     return(gs.best_params_)
-    
-                              
 
 def get_config():
     with open("params.yaml") as yaml_file:
         config = yaml.safe_load(yaml_file)
     return (config)
+
