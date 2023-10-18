@@ -30,7 +30,7 @@ class model_trainer:
                 "Random_Forest": RandomForestRegressor(),
                 "AdaBoost": AdaBoostRegressor(),
                 "GradientBoost": GradientBoostingRegressor(),
-                "XGBoost": XGBRegressor(),
+                # "XGBoost": XGBRegressor(),
                 "CatBoost": CatBoostRegressor(silent=True),
                 "Linear_Regression": LinearRegression()
             }

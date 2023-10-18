@@ -27,9 +27,9 @@ params:
     max_features: ['sqrt','log2']
     n_estimators: [8,16,32,64,128,256]
 
-  XGBoost:
-    learning_rate: [.1,.01,.05,.001]
-    n_estimators: [8,16,32,64,128,256]
+  # XGBoost:
+  #   learning_rate: [.1,.01,.05,.001]
+  #   n_estimators: [8,16,32,64,128,256]
 
   CatBoost:
     depth: [6,8,10]
